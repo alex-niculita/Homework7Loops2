@@ -106,10 +106,10 @@ public class Main {
         double monthlyInterest = 7;
         int months = 0;
         int monthsIn9Years = 12*9;
-        while (accountTotal<=targetSavings){
+        while (months<monthsIn9Years){
             accountTotal += accountTotal*(monthlyInterest/100);
             months++;
-            if(months%6==0 && months<=monthsIn9Years){
+            if(months%6==0){
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей\n",months,accountTotal);
             }
         }
@@ -117,11 +117,10 @@ public class Main {
 
     public static void task7(){
         System.out.println("\tFind friday:");
-        int friday = 3, daysTotal = 31, daysTemp = 0;
-        daysTemp = friday;
-        while (daysTemp<=daysTotal){
-            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет.\n", daysTemp);
-            daysTemp +=7;
+        int friday = 3, daysTotal = 31;
+        while (friday<=daysTotal){
+            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет.\n", friday);
+            friday +=7;
         }
     }
 
